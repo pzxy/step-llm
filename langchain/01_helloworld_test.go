@@ -11,7 +11,7 @@ import (
 	"github.com/tmc/langchaingo/llms/openai"
 )
 
-func TestDemo(t *testing.T) {
+func TestHelloWorld(t *testing.T) {
 	// aliyun dashscope qwen api key
 	// export DASHSCOPE_API_KEY="your_api_key" > ~/.zshrc
 	os.Setenv("OPENAI_API_KEY", os.Getenv("DASHSCOPE_API_KEY"))
@@ -37,6 +37,8 @@ func TestDemo(t *testing.T) {
 	// 	})); err != nil {
 	// 	log.Fatal(err)
 	// }
+	// Call is a simpler version of GenerateContent,Only for single string input and output.
+	// GenerateContent is supported for multimodal input and output.
 	r, err := llm.GenerateContent(ctx, content, llms.WithMaxTokens(1024))
 	if err != nil {
 		log.Fatal(err)
