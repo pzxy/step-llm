@@ -1,16 +1,17 @@
-package main
+package langchain
 
 import (
 	"context"
 	"fmt"
 	"log"
 	"os"
-	
+	"testing"
+
 	"github.com/tmc/langchaingo/llms"
 	"github.com/tmc/langchaingo/llms/openai"
 )
 
-func main() {
+func TestDemo(t *testing.T) {
 	// aliyun dashscope qwen api key
 	// export DASHSCOPE_API_KEY="your_api_key" > ~/.zshrc
 	os.Setenv("OPENAI_API_KEY", os.Getenv("DASHSCOPE_API_KEY"))
