@@ -11,14 +11,14 @@ import (
 func TestPromptTemplate(t *testing.T) {
 	// 1. prompt template
 	s := prompts.PromptTemplate{
-		Template: "{{.address}} time is {{.time}}.",
-		InputVariables: []string{"address"},  // if address variable is not provided, will print error info about missing variable
+		Template:       "{{.address}} time is {{.time}}.",
+		InputVariables: []string{"address"}, // if address variable is not provided, will print error info about missing variable
 		PartialVariables: map[string]any{ // predefine variable
 			"time": time.Now().Format("15:04:05"),
 		},
-		TemplateFormat : prompts.TemplateFormatGoTemplate, // default is Go template,so this line can be omitted
+		TemplateFormat: prompts.TemplateFormatGoTemplate, // default is Go template,so this line can be omitted
 	}
-	o,err := s.FormatPrompt(map[string]any{
+	o, err := s.FormatPrompt(map[string]any{
 		"address": "Beijing",
 	})
 	if err != nil {
@@ -36,7 +36,7 @@ func TestPromptTemplate(t *testing.T) {
 	}
 	t.Log(prompt)
 	// 2. chat prompt template
-	chatTmpl := prompts.NewChatPromptTemplate([]prompts.MessageFormatter{	
+	chatTmpl := prompts.NewChatPromptTemplate([]prompts.MessageFormatter{
 		prompts.NewSystemMessagePromptTemplate(
 			"You are a helpful assistant.",
 			nil,

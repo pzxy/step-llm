@@ -21,7 +21,7 @@ func TestPromptPlaceholder(t *testing.T) {
 	}
 	ctx := context.Background()
 	// build chat prompt template, and format to string type
-	message,err := prompts.NewChatPromptTemplate([]prompts.MessageFormatter{
+	message, err := prompts.NewChatPromptTemplate([]prompts.MessageFormatter{
 		prompts.NewSystemMessagePromptTemplate("Your are a {{.LanguageA}} Expert", []string{"LanguageA"}),
 		prompts.NewHumanMessagePromptTemplate("Help me to translate the {{.LanguageA}} text to {{.LanguageB}},text: {{.text}}", []string{"LanguageA", "LanguageB", "text"}),
 		prompts.MessagesPlaceholder{
