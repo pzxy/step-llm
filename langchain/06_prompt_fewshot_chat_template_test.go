@@ -58,7 +58,6 @@ func TestPromptFewshotChatTemplate(t *testing.T) {
 		prompts.NewSystemMessagePromptTemplate("You are a movie rating assistant.", nil),
 		prompts.NewHumanMessagePromptTemplate("Rate the movie '{{.movie}}'", []string{"movie"}),
 	})
-
 	// Format the chat prompt with test input and few-shot examples
 	messages, err := chatTmpl.FormatMessages(map[string]any{
 		"movie":    "The Matrix",
