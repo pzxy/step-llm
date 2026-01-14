@@ -12,9 +12,6 @@ import (
 )
 
 func TestMathChain(t *testing.T) {
-	if os.Getenv("DASHSCOPE_API_KEY") == "" {
-		t.Skip("DASHSCOPE_API_KEY is not set")
-	}
 	os.Setenv("OPENAI_API_KEY", os.Getenv("DASHSCOPE_API_KEY"))
 	llm, err := openai.New(
 		openai.WithBaseURL("https://dashscope.aliyuncs.com/compatible-mode/v1"),
