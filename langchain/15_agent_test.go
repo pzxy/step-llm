@@ -94,10 +94,10 @@ func TestReactAgent(t *testing.T) {
 	toolList := []tools.Tool{tavily, calculator}
 	toolNames := []string{tavily.Name(), calculator.Name()}
 
-	agent := agents.NewOneShotAgent(// Use the one-shot agent type
+	agent := agents.NewOneShotAgent( // Use the one-shot agent type
 		llm,
 		toolList,
-		agents.WithPromptFormatInstructions(mrklFormatInstructions(toolNames)),// Override the agent's default prompt template with a custom one
+		agents.WithPromptFormatInstructions(mrklFormatInstructions(toolNames)), // Override the agent's default prompt template with a custom one
 	)
 	executor := agents.NewExecutor(agent, agents.WithMaxIterations(8), agents.WithReturnIntermediateSteps())
 

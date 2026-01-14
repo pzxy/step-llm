@@ -1,0 +1,44 @@
+hello langchaingo loaders
+This is a fixture file for document loader tests.
+
+We will repeat some lines to make it long enough to split into chunks.
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
+hello langchaingo loaders
