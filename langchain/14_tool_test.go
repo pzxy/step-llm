@@ -84,7 +84,7 @@ func TestAgentWithMultipleTools(t *testing.T) {
 	agent := agents.NewOneShotAgent(
 		llm,
 		toolList,
-		agents.WithPromptFormatInstructions(mrklFormatInstructions(toolNames)),
+		agents.WithPromptFormatInstructions(mrklFormatInstructions(toolNames)),// Override the agent's default prompt template with a custom one
 	)
 	executor := agents.NewExecutor(agent, agents.WithMaxIterations(8))
 
