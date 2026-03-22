@@ -42,7 +42,13 @@ class HelloAgentsLLM:
             print("✅ 大语言模型响应成功:")
             collected_content = []
             for chunk in response:
-                content = chunk.choices[0].delta.content or ""
+                # 部分兼容接口在流末尾会下发 choices 为空的 chunk，避免 list index out of range
+                if not chunk.choices:
+                    continue
+                delta = chunk.choices[0].delta
+                if delta is None:
+                    continue
+                content = delta.content or ""
                 print(content, end="", flush=True)
                 collected_content.append(content)
             print()  # 在流式输出结束后换行

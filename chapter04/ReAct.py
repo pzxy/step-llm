@@ -45,7 +45,9 @@ class ReActAgent:
             messages = [{"role": "user", "content": prompt}]
             response_text = self.llm_client.think(messages=messages)
             if not response_text:
-                print("错误：LLM未能返回有效响应。"); break
+                print("错误：LLM未能返回有效响应。")
+                print("流程终止。")
+                return None
 
             thought, action = self._parse_output(response_text)
             if thought: print(f"🤔 思考: {thought}")
